@@ -6,7 +6,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export type VibeType = "Professional" | "Casual" | "Funny" | "Sérieux" | "Chaleureux" | "Créatif" | "Énergique" | "Calme" | "Inspirant";
+export type VibeType = "Professionel" | "Décontracté" | "Funny" | "Sérieux" | "Chaleureux" | "Créatif" | "Énergique" | "Calme" | "Inspirant";
 
 interface DropDownProps {
   vibe: VibeType;
@@ -14,8 +14,8 @@ interface DropDownProps {
 }
 
 let vibes: VibeType[] = [
-  "Professional",
-  "Casual",
+  "Professionel",
+  "Décontracté",
   "Funny",
   "Sérieux",
   "Chaleureux",

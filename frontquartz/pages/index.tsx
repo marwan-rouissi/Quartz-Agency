@@ -94,24 +94,24 @@ const Home: NextPage = () => {
     <Header />
     <div className="flex flex-col items-center justify-center max-w-5xl min-h-screen py-2 mx-auto">
       <Head>
-        <title>Instagram Bio Generator</title>
+        <title>Publication Generator</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="flex flex-col items-center justify-center flex-1 w-full px-4 mt-12 text-center sm:mt-20">
         <a
           className="flex items-center justify-center px-4 py-2 mb-5 space-x-2 text-sm text-gray-600 transition-colors bg-white border border-gray-300 rounded-full shadow-md max-w-fit hover:bg-gray-100"
-          href="https://www.quartzagency.com/"
+          href="https://www.quartzagency.fr/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Github />
-          <p>Consulter le site </p>
+          <p>Visiter le site Quartz Agency</p>
         </a>
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Generater votre bio Instagram et le hastag associé
+          Générer votre contenu et le hastag associé
         </h1>
-        <p className="mt-5 text-slate-500">47,118 bios generated so far.</p>
+        <p className="mt-5 text-slate-500">47,118 bios générées jusqu'ici.</p>
         <div className="w-full max-w-xl">
           <div className="flex items-center mt-10 space-x-3">
             <Image

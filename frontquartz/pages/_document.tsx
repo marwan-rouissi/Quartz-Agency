@@ -8,12 +8,12 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="Generate your next Twitter bio in seconds."
+            content="Generate fil d actualite instagram."
           />
           <meta property="og:site_name" content="twitterbio.com" />
           <meta
             property="og:description"
-            content="Generate your next Twitter bio in seconds."
+            content="Generate fil d actualite instagram."
           />
           <meta property="og:title" content="Twitter Bio Generator" />
           <meta name="twitter:card" content="summary_large_image" />
