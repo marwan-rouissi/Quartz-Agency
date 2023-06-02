@@ -35,7 +35,7 @@ inPut = [text, geneImg]
 outPut = [textOut,geneImgOut, []]
 
 
-token = "MTEwNjUzODMxNjg5MzAwMzc4Ng.G0orL-.KsHREPHRaIaXFloGqgCT3m41sZF_mj5nOXYKk0"
+token = "MTEwNjUzODMxNjg5MzAwMzc4Ng.GbrgCa.K5tlJugjRbfPyJcnPhp_IBtlAjV1JLEjrjLVkU"
 server_id = "1113874867276742688"
 parent_id = "1113942565633400992"
 name = "pending-command"
