@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style='position:absolute;left:600px;top:10px; width:700px'>
+    <a style='left:5px;font-size:20px; text-align: center;'>{% block title %}{{prompt}}{% endblock %}</a>
+{% if image_generator %}
+{% for i in image_generator %}
+    <img src = "{{ i }}" height="100px" width="100px" />
+{% endfor %}
+{% endif %}
+{% if hashtag %}
+{% for i in hashtag %}
+    <a>{{i}}</a>
+{% endfor %}
+{% endif %}
+</div>
+<form action='.' method='POST'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='recréer' />
+</form>
+<form action='../download/' method='POST'>{% csrf_token %}
+    <input type='submit' value='valider' />
+</form>
+{% endblock %}

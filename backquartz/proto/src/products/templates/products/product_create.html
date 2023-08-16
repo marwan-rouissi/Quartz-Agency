@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<script>
+    function myfunction(){
+        window.alert("Le chargement peut mettre jusqu'à plusieurs minutes pour charger.\nEn cas de problèmes de chargements :\n - réessayez une nouvelle fois;\n - réessayez ulterieurement.\nMerci de votre compréhension.");
+    }
+</script>
+<div style="position:absolute;top:10px;left:680px">
+    <a>ceci est un exemple de prompt et résultat :</a>
+</div>
+<div style='position:absolute;top:80px;left:700px;width:600px'>
+    <a style='left:5px;font-size:20px; text-align: center;'>{% block title %}{{prompt}}{% endblock %}</a>
+    {% load static %}
+    <img src="{% static 'img1.png' %}" height="100px" width="100px" />
+    <img src="{% static 'img2.png' %}" height="100px" width="100px" />
+    <img src="{% static 'img3.png' %}" height="100px" width="100px" />
+    <img src="{% static 'img4.png' %}" height="100px" width="100px" />
+    <img src="{% static 'img5.png' %}" height="100px" width="100px" />
+    <img src="{% static 'img6.png' %}" height="100px" width="100px" />
+    <img src="{% static 'img7.png' %}" height="100px" width="100px" />
+    <img src="{% static 'img8.png' %}" height="100px" width="100px" />
+    <img src="{% static 'img9.png' %}" height="100px" width="100px" />
+{% if hashtag %}
+{% for i in hashtag %}
+    <a>{{i}}</a>
+{% endfor %}
+{% endif %}
+</div>
+
+<form action='../created/' method='POST'>{% csrf_token %}
+    {{ form.as_p }}
+        <input type='submit' onclick="myfunction()" value='create' />
+    </label>
+</form>
+
+
+{% endblock %}
