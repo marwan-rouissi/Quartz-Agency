@@ -232,7 +232,7 @@ def postImage(token : str, channel_id : str, fl_path : str, message="" ):
 
     r = requests.post(f"https://discord.com/api/v9/channels/{channel_id}/messages", data=payload, headers=header, files=files)
 
-inter = discord("MTEwNjUzODMxNjg5MzAwMzc4Ng.GZAg-u.ed3YRwl_oVpuLUFzCS-mKCwmTMtxQrsdfZ9_OY")
+inter = discord("__YOUR_TOKEN__")
 
 def tile(filename, dir_in, dir_out, d):
     name, ext = os.path.splitext(filename)
@@ -259,12 +259,10 @@ def text(txt):
     textOut = ""
     hashTag = []
 
-    token = "MTEwNjUzODMxNjg5MzAwMzc4Ng.GbrgCa.K5tlJugjRbfPyJcnPhp_IBtlAjV1JLEjrjLVkU"
-    server_id = "1113874867276742688"
-    #"880420256798101554"
-    parent_id = "1113942565633400992"
-    #"968938556829614090"
-    name = "pending-command"
+    token = "__YPUR_TOKEN__"
+    server_id = "__YOUR_SERVER_ID__"
+    parent_id = "__YOUR_PARENT_ID__" "the
+    name = "THE_NAME_YOU_WANT"
 
     liste = ["",]
     for a in text:
@@ -275,7 +273,7 @@ def text(txt):
     for b in liste:
         if len(b)<=3:
             liste.remove(b)
-    openai.api_key = "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"
+    openai.api_key = "__YOUR_openai_TOKEN__"
 
     startPrompt = "Fait moi un article de " + str(len(liste)//10 + 1) + " paragraphes sur : "
     prompt = startPrompt + text + ". Fait ressortir les mots clés a la fin"
@@ -308,12 +306,10 @@ def img(geneimg=""):
 
     geneImgOut = ""
 
-    token = "MzQyMzEwNTg4NTQ3OTg5NTA1.GjaMNo.CXhtmHDbEk4DfdMtEQptGKjLQQHSnvWRqvDjGQ"
-    server_id = "880420256798101554"
-    #"1113874867276742688"
-    parent_id = "968938556829614090"
-    #"1113942565633400992"
-    name = "pending-command"
+    token = "__YOUR_TOKEN__"
+    server_id = "__YOUR_SERVER_ID__"
+    parent_id = "__YOUR_PARENT_ID__"
+    name = "THE_NAME_YOU_WANT"
 
     if geneImg != "":
         channel_id = createChannel(token, server_id, parent_id, name)
@@ -338,12 +334,10 @@ def main(text : str, geneImg : str, fileIp):
     hashTag = []
 
     outPut = [textOut,geneImgOut, []]
-    token = "MTEwNjUzODMxNjg5MzAwMzc4Ng.GZAg-u.ed3YRwl_oVpuLUFzCS-mKCwmTMtxQrsdfZ9_OY"
-    server_id = "1113874867276742688"
-    #"880420256798101554"
-    parent_id = "1113942565633400992"
-    #"968938556829614090"
-    name = "pending-command"
+    token = "__YOUR_TOKEN__"
+    server_id = "__YOUR_SERVER_ID__"
+    parent_id = "__YOUR_PARENT_ID__"
+    name = "__THE_NAME_YOU_WANT"
 
     liste = ["",]
     for a in text:
@@ -354,7 +348,7 @@ def main(text : str, geneImg : str, fileIp):
     for b in liste:
         if len(b)<=3:
             liste.remove(b)
-    openai.api_key = "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"
+    openai.api_key = "__YOUR_openai_TOKEN__"
 
     startPrompt = "Fait moi un article de " + str(len(liste)//10 + 1) + " paragraphes sur : "
     prompt = startPrompt + text + '. Fait ressortir les mots clés a la fin de la manière suivante : "Mots clés :..."'
@@ -404,8 +398,6 @@ def main(text : str, geneImg : str, fileIp):
         #    messages=[{"role": "user", "content": "réponds uniquement par Oui ou Non : est ce que " + geneImg + " est un être humain"}]
         #)
         #if human["choices"][0]["message"]["content"] == "Oui.":
-        #    #utiliser midjourney
-        #    pass
         createIntegration(token, server_id, "936929561302675456", channel_id, "938956540159881230", "imagine", "1118961510123847772", [{"type":3,"name":"prompt","value":geneImg}])
         tempImg = ""
         while tempImg == "":
@@ -456,42 +448,4 @@ def main(text : str, geneImg : str, fileIp):
 
 
     return (textOut,geneImgOut, keyWord)
-
-
-
-
-"""def product_created_view(request):
-    form = ProductForm(request.POST or None)
-
-    strform = str(form)
-    listform = [[]]
-    for a in strform:
-        if a == "\n":
-            listform.append("")
-        else:
-            listform[-1] += a
-    prompt = ""
-    image_generator = ""
-    inPut = [prompt,image_generator]
-    n = 0
-    for a in listform:
-        if "</textarea>" in a:
-            inPut[n] = a.replace("</textarea>","")
-            n+=1
-    P = Process(target=main,args=(inPut[0], inPut[1]))
-    P.start()
-    path('load/', product_load_view, name='product-list')
-    P.join()
-    print(Value(P))
-    #textOut,geneImgOut,hashtag = main(inPut[0],inPut[1])        
-
-    context = {
-        'prompt':textOut,
-        'image_generator':geneImgOut,
-        'hashtag':hashtag,
-        'form': form
-
-    }
-    print()
-    return render(request, "products/product_created.html", context)"""
 
