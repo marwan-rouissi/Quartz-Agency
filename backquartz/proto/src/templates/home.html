@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Quartz-agency prototype</h1>
+    <h3>Bienvenu sur notre prototype de création de posts!
+    </h3>
+    <h4>Pour commencer, <a href="products/create">cliquez ici</a></h4>
+<div style='position:absolute;left:500px;top:10px; width:800px'>
+    <p style='top:0%;left:5px;font-size:18px; text-align: left;'>{% block prompt1 %}{{prompt1}}{% endblock %}</p>
+    <p style='top:16%;left:5px;font-size:18px; text-align: left;'>{% block prompt2 %}{{prompt2}}{% endblock %}</p>
+    <p style='top:40%;left:5px;font-size:18px; text-align: left;'>{% block prompt3 %}{{prompt3}}{% endblock %}</p>
+    <p style='top:60%;left:5px;font-size:18px; text-align: left;'>{% block prompt4 %}{{prompt4}}{% endblock %}</p>
+
+</div>
+
+{% endblock %} 
